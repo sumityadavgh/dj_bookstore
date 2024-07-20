@@ -1,0 +1,22 @@
+
+body {
+    background-color: #212121;
+}
+
+h1 {
+    color: red;
+}
+
+p {
+    color: #ffffff;
+}
+
+a {
+    
+    color: sienna;
+}
+
+.bookcover {
+    height: 300px;
+    width: auto;
+}

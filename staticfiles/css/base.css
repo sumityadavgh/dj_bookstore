@@ -1,0 +1,32 @@
+
+body {
+    background-color: #212121;
+    min-height: 75rem;
+    padding-top: 4.5rem;
+}
+
+/* nav {
+    margin-bottom: 10rem;
+} */
+
+h1 {
+    color: green;
+}
+
+p {
+    color: #ffffff;
+}
+
+a {
+    
+    color: sienna;
+}
+
+img.bookcover {
+    height: 300px;
+    width: auto;
+}
+
+.pt-6 {
+    padding-top: 4rem; 
+}
