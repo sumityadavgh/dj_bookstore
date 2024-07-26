@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - "DJANGO_SECRET_KEY=your_django_project_secret_key"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8000", "http://0.0.0.0:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: always
+    
+  db:
+    image: postgres:16.3
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust" 
+
+volumes:
+  postgres_data:
