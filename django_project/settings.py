@@ -196,3 +196,7 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
+
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = BASE_DIR / "media"
